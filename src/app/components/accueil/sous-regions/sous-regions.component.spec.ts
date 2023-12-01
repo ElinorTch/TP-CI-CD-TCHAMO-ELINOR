@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SousRegionsComponent } from './sous-regions.component';
+import { HttpClient } from '@angular/common/http';
+import { PaysService } from 'src/app/services/pays.service';
 
 describe('SousRegionsComponent', () => {
   let component: SousRegionsComponent;
@@ -8,7 +10,8 @@ describe('SousRegionsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SousRegionsComponent]
+      declarations: [SousRegionsComponent],
+      providers: [PaysService, HttpClient]
     });
     fixture = TestBed.createComponent(SousRegionsComponent);
     component = fixture.componentInstance;

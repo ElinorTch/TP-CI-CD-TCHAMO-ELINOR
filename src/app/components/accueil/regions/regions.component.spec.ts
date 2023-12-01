@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegionsComponent } from './regions.component';
+import { HttpClient } from '@angular/common/http';
+import { PaysService } from 'src/app/services/pays.service';
 
 describe('RegionsComponent', () => {
   let component: RegionsComponent;
@@ -8,7 +10,8 @@ describe('RegionsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [RegionsComponent]
+      declarations: [RegionsComponent],
+      providers: [PaysService, HttpClient]
     });
     fixture = TestBed.createComponent(RegionsComponent);
     component = fixture.componentInstance;
