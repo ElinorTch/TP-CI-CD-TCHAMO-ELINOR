@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BarRatingModule } from "ngx-bar-rating"
 
 import { AProposComponent } from './a-propos.component';
 
