@@ -9,7 +9,10 @@ describe('AProposComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AProposComponent]
+      declarations: [AProposComponent],
+      imports: [
+        BarRatingModule
+      ]
     });
     fixture = TestBed.createComponent(AProposComponent);
     component = fixture.componentInstance;

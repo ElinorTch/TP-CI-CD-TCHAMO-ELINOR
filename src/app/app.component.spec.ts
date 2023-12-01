@@ -8,8 +8,15 @@ import { AccueilComponent } from './components/accueil/accueil.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
+    imports: [
+      RouterTestingModule
+    ],
+    declarations: [
+      AppComponent,
+      HeaderComponent,
+      FooterComponent,
+      AccueilComponent
+    ]
   }));
 
   it('should create the app', () => {

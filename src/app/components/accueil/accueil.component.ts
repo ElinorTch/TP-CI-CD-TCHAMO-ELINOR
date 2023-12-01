@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 import { IRegion } from 'src/app/models/iregion';
 import { ISousRegion } from 'src/app/models/isous-region';
 
@@ -23,9 +22,7 @@ export class AccueilComponent {
   graphe_asia: any[] = [];
   graphe_america: any[] = [];
 
-  constructor(
-    private toastr: ToastrService,
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
