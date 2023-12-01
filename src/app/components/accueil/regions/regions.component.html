@@ -1,0 +1,8 @@
+<ul class="list-group">
+  <li class="list-group-item text-white blue" aria-current="true">
+    <h6>Régions</h6>
+  </li>
+  <li class="list-group-item" *ngFor="let region of regions">
+    <a class="btn w-100" (click)="getCurrentRegion(region)">{{ region.region }}</a>
+  </li>
+</ul>

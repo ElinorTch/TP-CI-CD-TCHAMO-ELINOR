@@ -1,0 +1,13 @@
+<ul class="list-group">
+  <li class="list-group-item text-white blue" aria-current="true">
+    <h6>Sous-régions</h6>
+  </li>
+  <li class="list-group-item" *ngFor="let sousRegion of sousRegions">
+    <a class="btn w-100 d-flex flex-column justify-content-start align-items-sm-start" (click)="getCurrentSousRegion(sousRegion)">
+      <span>Régions mère: {{ sousRegion.region }}</span>
+      <span>Sous-régions : {{ sousRegion.subregion }}</span>
+    </a>
+  </li>
+  <li class="list-group-item" *ngIf="sousRegions.length === 0">Regions indisponibles</li>
+
+</ul>

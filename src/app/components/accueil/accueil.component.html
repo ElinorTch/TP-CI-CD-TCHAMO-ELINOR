@@ -1,0 +1,49 @@
+<!-- <app-header [numberOfResearch]="numberOfResearch"></app-header> -->
+<div class="container text-center mt-3">
+  <div class="row">
+    <div class="col">
+      <app-regions (region)="getCurrentRegion($event)" (africaDataset)="getAfricaDataset($event)"
+        (americaDataset)="getAmericaDataset($event)" (europeDataset)="getEuropeDataset($event)"
+        (asiaDataset)="getAsiaDataset($event)">
+      </app-regions>
+    </div>
+    <div class="col">
+      <app-sous-regions [currentRegion]="currentRegion"
+        (currentSousRegion)="getCurrentSousRegion($event)">
+      </app-sous-regions>
+    </div>
+    <div class="col">
+      <app-pays [currentSousRegion]="currentSousRegion" (paysLength)="getPaysLength($event)" [currentPage]="currentPage"
+        (searchPaysLength)="getNumberOfResearch($event)">
+      </app-pays>
+      <section class="mt-3 w-100 d-flex justify-content-center align-items-center">
+        <pagination *ngIf="paysLength" [totalItems]="paysLength" [(ngModel)]="currentPage"></pagination>
+      </section>
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex flex-column align-items-center">
+    <h2>Toutes les statistiques</h2>
+    <div class="mt-3 d-flex flex-column align-items-center">
+      <h6 class="text-center"> Région Européene</h6>
+      <app-statistic [data_country]="graphe_europe"></app-statistic>
+    </div>
+    <hr>
+    <div class="mt-6 d-flex flex-column align-items-center">
+      <h6 class="text-center"> Région Africaine</h6>
+      <app-statistic [data_country]="graphe_afrique"></app-statistic>
+    </div>
+    <hr>
+    <div class="mt-6 d-flex flex-column align-items-center">
+      <h6 class="text-center"> Région asiatique</h6>
+      <app-statistic [data_country]="graphe_asia"></app-statistic>
+    </div>
+    <hr>
+    <div class="mt-6 d-flex flex-column align-items-center">
+      <h6 class="text-center"> Région américaine</h6>
+      <app-statistic [data_country]="graphe_america"></app-statistic>
+    </div>
+    <hr>
+  </div>
+</div>
+

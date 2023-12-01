@@ -1,0 +1,8 @@
+<div class="container text-center mt-3" *ngIf="dataIsLoaded">
+  <div class="row">
+    <ngx-charts-bar-vertical [view]="[1000,400]" [results]="data_country" [xAxisLabel]="'Pays'"
+      [legendTitle]="'Population par pays'" [yAxisLabel]="'Population'" [legend]="true" [showXAxisLabel]="true"
+      [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="false">
+    </ngx-charts-bar-vertical>
+  </div>
+</div>

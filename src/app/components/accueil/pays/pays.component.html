@@ -1,0 +1,18 @@
+<ul class="list-group">
+  <li class="list-group-item text-white blue" aria-current="true">
+    <h6>Pays</h6>
+  </li>
+  <div class="input-group mb-2 mt-2" *ngIf="paysLengt">
+    <input type="text" class="form-control" placeholder="Nom du pays"aria-label="Recipient's username"
+      aria-describedby="button-addon2" (ngModelChange)="searchPays($event)" [(ngModel)]="pattern">
+  </div>
+  <li class="list-group-item d-flex align-items-center" *ngFor="let country of paysPerPage">
+    <img [src]="country.flag" class="rounded float-start" height="50px" width="75px" alt="...">
+    <a class="btn w-100 d-flex flex-column justify-content-start align-items-start">
+      <span>Nom : {{ country.nom }}</span>
+      <span>Capitale : {{ country.capital }}</span>
+      <span>Population : {{ country.population }}</span>
+    </a>
+  </li>
+  <li class="list-group-item" *ngIf="paysPerPage.length === 0">Pays indisponibles</li>
+</ul>
