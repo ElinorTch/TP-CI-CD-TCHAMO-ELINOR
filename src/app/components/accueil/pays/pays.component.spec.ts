@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PaysComponent } from './pays.component';
 import { PaysService } from 'src/app/services/pays.service';
 import { HttpClient, HttpHandler } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 describe('PaysComponent', () => {
   let component: PaysComponent;
@@ -10,7 +11,7 @@ describe('PaysComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [PaysComponent],
-      providers: [PaysService, HttpClient, HttpHandler]
+      providers: [PaysService, HttpClient, HttpHandler, ToastrService]
     });
     fixture = TestBed.createComponent(PaysComponent);
     component = fixture.componentInstance;
