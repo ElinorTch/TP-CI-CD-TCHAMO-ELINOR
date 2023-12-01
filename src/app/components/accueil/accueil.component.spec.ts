@@ -6,6 +6,7 @@ import { RegionsComponent } from './regions/regions.component';
 import { SousRegionsComponent } from './sous-regions/sous-regions.component';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { TOAST_CONFIG, ToastrModule, ToastrService } from 'ngx-toastr';
+import { StatisticComponent } from '../statistic/statistic.component';
 
 describe('AccueilComponent', () => {
   let component: AccueilComponent;
@@ -18,6 +19,7 @@ describe('AccueilComponent', () => {
         PaysComponent,
         RegionsComponent,
         SousRegionsComponent,
+        StatisticComponent,
       ],
       imports: [ToastrModule.forRoot()],
       providers: [HttpClient, HttpHandler, ToastrService]
