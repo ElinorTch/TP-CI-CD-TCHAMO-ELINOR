@@ -11,12 +11,13 @@ describe('AccueilComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AccueilComponent],
-      imports: [
+      declarations: [
+        AccueilComponent,
         PaysComponent,
         RegionsComponent,
         SousRegionsComponent,
-      ]
+      ],
+      imports: []
     });
     fixture = TestBed.createComponent(AccueilComponent);
     component = fixture.componentInstance;
