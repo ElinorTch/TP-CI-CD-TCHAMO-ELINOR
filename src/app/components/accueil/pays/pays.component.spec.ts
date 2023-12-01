@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PaysComponent } from './pays.component';
 import { PaysService } from 'src/app/services/pays.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('PaysComponent', () => {
   let component: PaysComponent;
@@ -10,7 +10,7 @@ describe('PaysComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [PaysComponent],
-      providers: [PaysService, HttpClient]
+      providers: [PaysService, HttpClient, HttpHandler]
     });
     fixture = TestBed.createComponent(PaysComponent);
     component = fixture.componentInstance;

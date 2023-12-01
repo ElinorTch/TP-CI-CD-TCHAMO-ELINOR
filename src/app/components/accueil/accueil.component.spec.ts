@@ -4,6 +4,7 @@ import { AccueilComponent } from './accueil.component';
 import { PaysComponent } from './pays/pays.component';
 import { RegionsComponent } from './regions/regions.component';
 import { SousRegionsComponent } from './sous-regions/sous-regions.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('AccueilComponent', () => {
   let component: AccueilComponent;
@@ -17,7 +18,8 @@ describe('AccueilComponent', () => {
         RegionsComponent,
         SousRegionsComponent,
       ],
-      imports: []
+      imports: [],
+      providers: [HttpClient, HttpHandler]
     });
     fixture = TestBed.createComponent(AccueilComponent);
     component = fixture.componentInstance;
