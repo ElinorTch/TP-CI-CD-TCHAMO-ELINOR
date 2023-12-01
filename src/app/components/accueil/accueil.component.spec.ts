@@ -5,7 +5,7 @@ import { PaysComponent } from './pays/pays.component';
 import { RegionsComponent } from './regions/regions.component';
 import { SousRegionsComponent } from './sous-regions/sous-regions.component';
 import { HttpClient, HttpHandler } from '@angular/common/http';
-import { ToastrService } from 'ngx-toastr';
+import { TOAST_CONFIG, ToastrService } from 'ngx-toastr';
 
 describe('AccueilComponent', () => {
   let component: AccueilComponent;
@@ -20,7 +20,7 @@ describe('AccueilComponent', () => {
         SousRegionsComponent,
       ],
       imports: [],
-      providers: [HttpClient, HttpHandler, ToastrService]
+      providers: [HttpClient, HttpHandler, ToastrService, TOAST_CONFIG]
     });
     fixture = TestBed.createComponent(AccueilComponent);
     component = fixture.componentInstance;
