@@ -19,7 +19,7 @@ describe('AccueilComponent', () => {
         RegionsComponent,
         SousRegionsComponent,
       ],
-      imports: [ToastrModule],
+      imports: [ToastrModule.forRoot()],
       providers: [HttpClient, HttpHandler, ToastrService]
     });
     fixture = TestBed.createComponent(AccueilComponent);

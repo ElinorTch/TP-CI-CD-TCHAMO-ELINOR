@@ -11,7 +11,7 @@ describe('PaysComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [PaysComponent],
-      imports: [ToastrModule],
+      imports: [ToastrModule.forRoot()],
       providers: [PaysService, HttpClient, HttpHandler, ToastrService]
     });
     fixture = TestBed.createComponent(PaysComponent);
